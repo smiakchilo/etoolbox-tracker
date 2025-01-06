@@ -1,0 +1,36 @@
+<template id="settings-dialog">
+  <coral-checkbox name="hideFasterThan">Hide records faster than...</coral-checkbox>
+  <coral-numberinput
+      name="hideThreshold"
+      min="0.1"
+      step="0.1"
+      value="0.1"
+      class="full-width"
+      hidden
+      data-visible-when="hideFasterThan"
+      data-postfix="ms."></coral-numberinput>
+  <hr>
+  <coral-checkbox name="markSlowerThan">Mark records slower than...</coral-checkbox>
+  <coral-numberinput
+      name="slowThreshold"
+      min="1"
+      value="40"
+      class="full-width"
+      hidden
+      data-visible-when="markSlowerThan"
+      data-postfix="ms."></coral-numberinput>
+  <hr>
+  <label for="field-bookmarks">Visual bookmarks (one matching substring or RegExp per line)</label>
+  <textarea
+      id="field-bookmarks"
+      is="coral-textarea"
+      name="bookmarks"
+      rows="7"
+      class="full-width"
+      value=""></textarea>
+</template>
+
+<template id="dialog-ok-cancel">
+  <button is="coral-button" variant="primary">OK</button>
+  <button is="coral-button" variant="secondary" coral-close>Cancel</button>
+</template>

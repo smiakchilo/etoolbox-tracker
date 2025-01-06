@@ -1,0 +1,6 @@
+js/alerts.js
+js/common.js
+js/dialog.js
+js/hooks.js
+js/settings.js
+js/tree.js
